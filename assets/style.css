@@ -107,3 +107,22 @@ input{
 input:focus{
     border: 1px solid rgb(125, 235, 125);
 }
+
+.btn-container{
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.btn-container button{
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(125, 235, 125);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+flex{
+    display: flex;
+}
