@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
@@ -45,10 +46,37 @@ nav{
 }
 
 section{
-    grid-area: section;
-    background-color: white;
+ 
+}
+
+.container-titulo, .btn-new-chat{
+    display: flex;
+   
+}
+
+.container-titulo > h1{
+    color: rgb(125, 235, 125);
+    font-size: x-large;
+}
+
+.container-titulo{
+    justify-content: space-between;
+    padding: 17px 10px;
+}
+
+.btn-new-chat{
+    border-radius: 100%;
+    padding: 7px;
+    align-items: center;
+    margin-right: 10px;
     
 }
+
+.btn-new-chat:hover{
+    background-color: rgb(198, 244, 199);
+}
+
+
 main{
     grid-area: main;
     background-color: blue;
