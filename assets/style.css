@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,115 +6,121 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body{
+body {
     height: 100dvh;
     display: grid;
-    grid-template-columns: 60px 1fr 2fr;
-    grid-template-areas: 
-    "nav section main";
-
+    grid-template-columns: 60px 460px;
+    grid-template-areas: "nav section";
+    background: #efeae2;
 }
 
-nav{
+nav {
     grid-area: nav;
-    background-color:rgb(247, 245, 243);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: rgb(247, 245, 243);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
     padding: 10px;
-    
+    border-right: 1px solid #e2ddd8;
 }
 
-.container-nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.container-nav {
+    display: grid;
+    justify-items: center;
+    align-content: start;
     gap: 16px;
-    align-items: center;
+    width: 100%;
 }
 
-.container-nav img{
+.container-nav:last-child {
+    align-content: end;
+}
+
+.container-nav img {
     border-radius: 100%;
     padding: 7px;
     width: 40px;
-
+    cursor: pointer;
 }
 
-.container-nav img:hover{
+.container-nav img:hover {
     background-color: rgb(198, 244, 199);
-   
 }
 
-section{
+section {
     grid-area: section;
     background-color: white;
-    display: flex;
-    flex-direction: column;
- 
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    border-right: 1px solid #eae2db;
 }
 
-.container-titulo, .btn-new-chat{
-    display: flex;
-   
+.container-stick {
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    height: 100%;
 }
 
-.container-titulo > h1{
+.container-titulo,
+.btn-new-chat {
+    display: grid;
+}
+
+.container-titulo > h1 {
     color: rgb(125, 235, 125);
     font-size: x-large;
 }
 
-.container-titulo{
-    justify-content: space-between;
+.container-titulo {
+    grid-template-columns: 1fr auto;
+    align-items: center;
     padding: 17px 10px;
 }
 
-.btn-new-chat{
-    border-radius: 100%;
-    padding: 7px;
+.btn-new-chat {
+    grid-template-columns: repeat(2, auto);
     align-items: center;
+    gap: 8px;
+    padding: 7px;
+    border-radius: 100%;
     margin-right: 10px;
-    
 }
 
-.btn-new-chat:hover{
+.btn-new-chat:hover {
     background-color: rgb(198, 244, 199);
 }
 
-
-main{
-    grid-area: main;
-    background-color: blue;
-    
-}
 img {
     display: block;
     max-width: 100%;
 }
 
-form{
+form {
     padding: 10px;
 }
 
-input{
+input {
     width: 100%;
     padding: 12px 16px;
     border-radius: 20px;
     border: 1px solid transparent;
-    background-color: #F6F5F4 ;
-    outline: none;    
+    background-color: #F6F5F4;
+    outline: none;
 }
 
-input:focus{
+input:focus {
     border: 1px solid rgb(125, 235, 125);
 }
 
-.btn-container{
-    justify-content: space-between;
-    padding: 10px;
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px 12px 14px;
 }
 
-.btn-container button{
-    padding: 5px 10px;
+.btn-container button {
+    padding: 6px 12px;
     border-radius: 20px;
     border: none;
     background-color: rgb(125, 235, 125);
@@ -123,6 +129,82 @@ input:focus{
     cursor: pointer;
 }
 
-flex{
-    display: flex;
+.chat-list {
+    display: grid;
+}
+
+.chat-card {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 14px 16px;
+    border-top: 1px solid #f1efee;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.chat-card:hover {
+    background: #f5f5f5;
+}
+
+.chat-card.active {
+    background: #f0f2f5;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-content {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+}
+
+.chat-header,
+.chat-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px;
+}
+
+.chat-header h2 {
+    font-size: 1rem;
+    color: #111b21;
+    font-weight: 700;
+}
+
+.chat-header span,
+.chat-footer p {
+    font-size: 0.72rem;
+    color: #667781;
+}
+
+.chat-footer p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badge {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #25d366;
+    color: white;
+    font-size: 0.68rem;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.badge.muted {
+    background: #dfe7ea;
+    color: #53626d;
 }
