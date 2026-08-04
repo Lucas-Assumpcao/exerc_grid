@@ -53,6 +53,7 @@ section {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     border-right: 1px solid #eae2db;
+     overflow-y: scroll;
 }
 
 .container-stick {
@@ -149,10 +150,6 @@ input:focus {
     background: #f5f5f5;
 }
 
-.chat-card.active {
-    background: #f0f2f5;
-}
-
 .avatar {
     width: 52px;
     height: 52px;
@@ -192,7 +189,7 @@ input:focus {
     text-overflow: ellipsis;
 }
 
-.badge {
+.notificacao {
     min-width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -202,9 +199,4 @@ input:focus {
     display: grid;
     place-items: center;
     font-weight: 700;
-}
-
-.badge.muted {
-    background: #dfe7ea;
-    color: #53626d;
 }
