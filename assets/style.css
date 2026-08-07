@@ -206,3 +206,10 @@ input:focus {
     place-items: center;
     font-weight: 700;
 }
+
+main{
+    
+    background-image: url(../assets/img/assets/imgs/whatsapp_bg.png);
+    display: grid;
+    
+}
