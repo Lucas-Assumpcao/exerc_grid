@@ -8,6 +8,7 @@
 
 body {
     height: 100dvh;
+    min-height: 100dvh;
     display: grid;
     grid-template-columns: 60px 460px;
     grid-template-areas: "nav section";
@@ -53,13 +54,16 @@ section {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     border-right: 1px solid #eae2db;
-     overflow-y: scroll;
+    height: 100%;
+    min-height: 0;
 }
 
 .container-stick {
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     height: 100%;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .container-titulo,
@@ -132,6 +136,8 @@ input:focus {
 
 .chat-list {
     display: grid;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .chat-card {
