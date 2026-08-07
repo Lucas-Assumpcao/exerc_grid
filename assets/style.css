@@ -214,7 +214,7 @@ input:focus {
     min-height: 0;
     height: 100%;
     padding: 0;
-    background: #f0f2f5;
+    background-image: url('./imgs/whatsapp_bg.png');
 }
 
 .chat-shell {
