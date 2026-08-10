@@ -12,8 +12,21 @@ body{
     height: 100dvh;
 }
 
-.triangulo{
+
+.elemento-pai{
     width: 200px;
-    height: 200px;
-    background-color: black;
+    height: 100px;
+    background-color: rgb(224, 224, 224);
+    position: relative;
+}
+.triangulo{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid rgb(180, 172, 172);
+    position: absolute;
+    rotate:180deg;
+    right: 50px;
+
+
+    
 }
