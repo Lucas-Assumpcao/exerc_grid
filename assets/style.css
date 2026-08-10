@@ -227,7 +227,8 @@ input:focus {
 .chat-topbar {
     grid-column: 1 / span 12;
     grid-row: 1 / span 1;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 12px;
     padding: 14px 20px;
@@ -249,14 +250,15 @@ input:focus {
     grid-column: 1 / span 12;
     grid-row: 2 / span 9;
     padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display:grid;
+    align-content: end;
     gap: 12px;
     background-image: url('./imgs/whatsapp_bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .message {
@@ -268,13 +270,13 @@ input:focus {
 }
 
 .message.received {
-    align-self: flex-start;
+    justify-self: start;
     background: white;
     color: #111b21;
 }
 
 .message.sent {
-    align-self: flex-end;
+    justify-self: end;
     background: #d9fdd3;
     color: #111b21;
 }
