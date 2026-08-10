@@ -285,8 +285,8 @@ input:focus {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
+    gap: 2px;
+    padding: 12px 16px;
     background: #f0f2f5;
     border-top: 1px solid #e2ddd8;
 }
