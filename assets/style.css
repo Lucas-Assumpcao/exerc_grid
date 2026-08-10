@@ -267,13 +267,13 @@ input:focus {
 }
 
 .message.received {
-    align-self: flex-start;
+    justify-self: start;
     background: white;
     color: #111b21;
 }
 
 .message.sent {
-    align-self: flex-end;
+    justify-self: end;
     background: #d9fdd3;
     color: #111b21;
 }
