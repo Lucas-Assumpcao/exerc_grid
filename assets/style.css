@@ -257,6 +257,8 @@ input:focus {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-y: auto;
+    min-height: 0;
 }
 
 .message {
