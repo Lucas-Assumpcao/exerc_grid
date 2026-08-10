@@ -10,6 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100dvh;
+    gap: 50px;
 }
 
 
@@ -29,4 +30,67 @@ body{
 
 
     
+}
+
+.folha {
+    height: 200px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+}
+
+.triangulo2{
+    border-left: 50px solid white;
+    border-right: 0px solid red;
+    border-bottom: 50px solid rgb(180, 172, 172);
+    position: absolute;
+    rotate: 90deg;
+    right: 0px;
+}
+
+.pacman{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    position: relative;
+    border-radius: 100%;
+
+}
+
+.boca{
+    border-left: 15px solid yellow;
+    border-right: 15px solid yellow;
+    border-bottom: 50px solid white;
+    position: absolute;
+    rotate: 270deg;
+    right: 10px;
+    bottom: 30px;
+}
+
+.olho{
+    height: 15px;
+    width: 15px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100%;
+    right: 35px;
+    bottom: 70px;
+
+}
+
+.bandeira{
+    border-left: 50px solid green;
+    border-right: 50px solid red;
+    border-bottom: 50px solid blue;
+    border-top: 50px solid orange;
+    border-radius: 100%;
+    position: absolute;
+    rotate: 90deg;
+    right: 10px;
+   
+}
+
+.circulo{
+    height: 150px;
+    width: 150px;
 }
