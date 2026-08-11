@@ -87,10 +87,8 @@ body{
     position: absolute;
     rotate: 90deg;
     right: 10px;
-   
-}
+    height: 350px;
+    width: 350px;
 
-.circulo{
-    height: 150px;
-    width: 150px;
+   
 }
