@@ -1,13 +1,10 @@
 import { usuarios, todosUsuarios, contatos, mensagens } from "./contatos.js";
 
-todosUsuarios()
-contatos()
-mensagens()
 
 const elemento = {
     form_send_message: document.querySelector("#form-send-msg"),
     input_send_message: document.querySelector("#input-send-msg"),
-    grid_container: document.querySelector(".grid-msg"),
+    grid_container: document.querySelector(".chat-messages"),
 };
 
 elemento.form_send_message.addEventListener("submit", (e) => {
@@ -30,8 +27,8 @@ function insertMessage(message) {
     const paragrafo = document.createElement("p");
     const span = document.createElement("span");
 
-    article.classList.add("enviados");
-
+   article.classList.add("message", "sent");
+   
     paragrafo.innerText = message;
     span.classList.add("hour");
     span.innerText = `${getHour()}`;
@@ -39,8 +36,8 @@ function insertMessage(message) {
     article.append(paragrafo,span);
 
     elemento.grid_container.append(article);
-    elemento.grid_container.scrollTop + elemento.grid_container.scrollHeight;
-    elemento.input_send_message.value + "";
+    elemento.grid_container.scrollTop = elemento.grid_container.scrollHeight;
+    elemento.input_send_message.value = "";
 
 
 
