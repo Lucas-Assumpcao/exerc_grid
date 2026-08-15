@@ -24,3 +24,24 @@ function getHour(){
     });
     return data;
 }
+
+function insertMessage(message) {
+    const article = document.createElement("article");
+    const paragrafo = document.createElement("p");
+    const span = document.createElement("span");
+
+    article.classList.add("enviados");
+
+    paragrafo.innerText = message;
+    span.classList.add("hour");
+    span.innerText = `${getHour()}`;
+
+    article.append(paragrafo,span);
+
+    elemento.grid_container.append(article);
+    elemento.grid_container.scrollTop + elemento.grid_container.scrollHeight;
+    elemento.input_send_message.value + "";
+
+
+
+    }
