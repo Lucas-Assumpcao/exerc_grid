@@ -251,6 +251,7 @@ input:focus {
     grid-row: 2 / span 9;
     padding: 24px;
     display:grid;
+    grid-template-columns: 1fr;
     align-content: end;
     gap: 12px;
     background-image: url('./imgs/whatsapp_bg.png');
@@ -262,6 +263,7 @@ input:focus {
 }
 
 .message {
+    width: max-content;
     max-width: 60%;
     padding: 10px 14px;
     border-radius: 12px;
