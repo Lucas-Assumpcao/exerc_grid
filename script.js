@@ -71,7 +71,6 @@ function insertMessage(message) {
         chatList.append(article);
     });
 }
-    renderizarListaContatos();
 
     function renderizarConversa(indice) {
     const contato = usuarios["whats-users"][usuarioAtivo].contacts[indice];
@@ -110,3 +109,14 @@ document.querySelector(".chat-list").addEventListener("click", (e) => {
 
 renderizarListaContatos();
 renderizarConversa(contatoAtivo); // abre a Ana (índice 0) por padrão
+
+const navAvatar = document.querySelector("#nav-avatar");
+const secaoChat = document.querySelector(".chat-sidebar");   // lista de contatos
+const secaoPerfil = document.querySelector(".perfil-screen");
+const chatMain = document.querySelector(".chat-main");
+
+navAvatar.addEventListener("click", () => {
+    secaoChat.classList.toggle("hidden");
+    chatMain.classList.toggle("hidden");
+    secaoPerfil.classList.toggle("hidden");
+});
