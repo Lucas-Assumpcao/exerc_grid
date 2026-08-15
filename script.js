@@ -107,9 +107,6 @@ document.querySelector(".chat-list").addEventListener("click", (e) => {
     renderizarConversa(Number(card.dataset.index));
 });
 
-renderizarListaContatos();
-renderizarConversa(contatoAtivo); // abre a Ana (índice 0) por padrão
-
 const navAvatar = document.querySelector("#nav-avatar");
 const secaoChat = document.querySelector(".chat-sidebar");   // lista de contatos
 const secaoPerfil = document.querySelector(".perfil-screen");
@@ -138,3 +135,28 @@ function formatarTelefone(numero) {
     const parte2 = numero.slice(7);
     return `+55 ${ddd} ${parte1}-${parte2}`;
 }
+
+function renderizarTrocaPerfil() {
+    const listaUsuarios = usuarios["whats-users"];
+    const container = document.querySelector("#trocar-perfil-lista");
+
+    container.innerHTML = "";
+
+    listaUsuarios.forEach((usuario, index) => {
+        const div = document.createElement("div");
+        div.classList.add("trocar-perfil-item");
+        div.dataset.index = index;
+
+        div.innerHTML = `
+            <img src="https://i.pravatar.cc/150?u=${usuario.number}" alt="${usuario.nickname}">
+            <span>${usuario.nickname}</span>
+        `;
+
+        container.append(div);
+    });
+}
+
+renderizarListaContatos();
+renderizarConversa(contatoAtivo);
+renderizarTrocaPerfil();
+
