@@ -160,3 +160,14 @@ renderizarListaContatos();
 renderizarConversa(contatoAtivo);
 renderizarTrocaPerfil();
 
+document.querySelector("#trocar-perfil-lista").addEventListener("click", (e) => {
+    const item = e.target.closest(".trocar-perfil-item");
+    if (!item) return;
+
+    usuarioAtivo = Number(item.dataset.index);
+    contatoAtivo = 0; // reseta pra primeira conversa do novo usuário
+
+    renderizarPerfil();
+    renderizarListaContatos();
+    renderizarConversa(contatoAtivo);
+});
