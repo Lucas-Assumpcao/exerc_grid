@@ -72,3 +72,41 @@ function insertMessage(message) {
     });
 }
     renderizarListaContatos();
+
+    function renderizarConversa(indice) {
+    const contato = usuarios["whats-users"][usuarioAtivo].contacts[indice];
+    contatoAtivo = indice;
+
+    // Atualiza o topo (.chat-topbar)
+    const topbarAvatar = document.querySelector(".chat-topbar .avatar");
+    const topbarNome = document.querySelector(".chat-topbar h2");
+    const topbarStatus = document.querySelector(".chat-topbar p");
+
+    topbarAvatar.src = `https://i.pravatar.cc/150?u=${contato.number}`;
+    topbarAvatar.alt = contato.name;
+    topbarNome.innerText = contato.name;
+    topbarStatus.innerText = contato.description; // ex: "Frontend Developer"
+
+    // Atualiza as mensagens (.chat-messages)
+    const chatMessages = document.querySelector(".chat-messages");
+    chatMessages.innerHTML = "";
+
+    contato.messages.forEach((msg) => {
+        const div = document.createElement("div");
+        div.classList.add("message", msg.sender === "me" ? "sent" : "received");
+        div.innerText = msg.content;
+        chatMessages.append(div);
+    });
+
+    elemento.grid_container.scrollTop = elemento.grid_container.scrollHeight;
+}
+
+document.querySelector(".chat-list").addEventListener("click", (e) => {
+    const card = e.target.closest(".chat-card");
+    if (!card) return;
+
+    renderizarConversa(Number(card.dataset.index));
+});
+
+renderizarListaContatos();
+renderizarConversa(contatoAtivo); // abre a Ana (índice 0) por padrão
