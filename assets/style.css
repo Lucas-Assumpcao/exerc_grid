@@ -307,3 +307,84 @@ input:focus {
     font-weight: bold;
     cursor: pointer;
 }
+
+.hidden {
+    display: none !important;
+}
+
+.perfil-screen {
+    grid-column: 2;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto 1fr;
+    row-gap: 20px;
+    padding: 24px;
+    border-right: 1px solid #eae2db;
+    overflow-y: auto;
+}
+
+.perfil-foto {
+    display: grid;
+    justify-content: center;
+}
+
+.perfil-foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-campo {
+    display: grid;
+    gap: 6px;
+}
+
+.perfil-label {
+    font-size: 0.85rem;
+    color: #667781;
+}
+
+.perfil-linha {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-small {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.trocar-perfil-container h2 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.trocar-perfil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+
+.trocar-perfil-item {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.trocar-perfil-item img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.trocar-perfil-item span {
+    font-size: 0.8rem;
+    color: #111b21;
+}
