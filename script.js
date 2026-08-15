@@ -115,8 +115,26 @@ const secaoChat = document.querySelector(".chat-sidebar");   // lista de contato
 const secaoPerfil = document.querySelector(".perfil-screen");
 const chatMain = document.querySelector(".chat-main");
 
+function renderizarPerfil() {
+    const usuario = usuarios["whats-users"][usuarioAtivo];
+
+    document.querySelector("#perfil-avatar").src = `https://i.pravatar.cc/300?u=${usuario.number}`;
+    document.querySelector("#perfil-nome").innerText = usuario.account;
+    document.querySelector("#perfil-telefone").innerText = formatarTelefone(usuario.number);
+}
+
 navAvatar.addEventListener("click", () => {
     secaoChat.classList.toggle("hidden");
     chatMain.classList.toggle("hidden");
     secaoPerfil.classList.toggle("hidden");
+
+    renderizarPerfil();
 });
+
+function formatarTelefone(numero) {
+    // ex: "11987876567" -> "+55 11 98787-6567"
+    const ddd = numero.slice(0, 2);
+    const parte1 = numero.slice(2, 7);
+    const parte2 = numero.slice(7);
+    return `+55 ${ddd} ${parte1}-${parte2}`;
+}
