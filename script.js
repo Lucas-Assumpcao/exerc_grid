@@ -172,7 +172,7 @@ document.querySelector("#trocar-perfil-lista").addEventListener("click", (e) => 
     renderizarConversa(contatoAtivo);
 });
 
-const btnDarkMode = document.querySelector(".container-nav img[alt='WhatsApp Logo']"); // ver nota abaixo
+const btnDarkMode = document.querySelector("#btn-dark-mode");
 
 btnDarkMode.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
