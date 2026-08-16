@@ -5,7 +5,7 @@ let contatoAtivo = 0;   // índice do contato/conversa aberta
 const elemento = {
     form_send_message: document.querySelector("#form-send-msg"),
     input_send_message: document.querySelector("#input-send-msg"),
-    grid_container: document.querySelector(".chat-messages"),
+    grid_container: document.querySelector(".chat-messages-inner"), // ← mudou aqui
 };
 
 elemento.form_send_message.addEventListener("submit", (e) => {
@@ -87,7 +87,7 @@ function insertMessage(message) {
     topbarStatus.innerText = contato.description; // ex: "Frontend Developer"
 
     // Atualiza as mensagens (.chat-messages)
-    const chatMessages = document.querySelector(".chat-messages");
+    const chatMessages = document.querySelector(".chat-messages-inner"); // ← mudou aqui
     chatMessages.innerHTML = "";
 
     contato.messages.forEach((msg) => {
